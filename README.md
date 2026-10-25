@@ -33,7 +33,7 @@ Performed host discovery using Nmap to identify active hosts on the network. Fou
 
 Conducted a TCP SYN scan against the target machine to identify open ports and understand which services were accessible.
 
-![Host Discovery](https://imgur.com/jvbcKvv)
+![Host Discovery](https://i.imgur.com/jvbcKvv)
 
 ## Step 3: Service and Version Detection
 
