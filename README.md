@@ -18,3 +18,12 @@ The Nmap Scanning Lab aimed to identify open ports, detect running services and 
 - **Kali Linux** – Operating system for performing network reconnaissance and security testing.
 - **Terminal / Command Line** – Executing Nmap commands and analyzing scan results.
 - **Metasploitable 2** - Target machine
+
+## Steps
+
+## Step 1: Host Discovery
+
+Performed host discovery using Nmap to identify active hosts on the network. Four hosts were discovered.
+
+![Host Discovery](PASTE-YOUR-IMGUR-IMAGE-URL-HERE](https://imgur.com/eyoUk7G)
+
