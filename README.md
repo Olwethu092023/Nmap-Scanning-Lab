@@ -39,25 +39,25 @@ Conducted a TCP SYN scan against the target machine to identify open ports and u
 
 Scanned all ports to identify running services, their versions, and information gathered through Nmap's default scripts.
 
-![Host Discovery](https://imgur.com/OSlmbJ7)
+![Host Discovery](https://imgur.com/OSlmbJ7.png)
 
 ## Step 4: UDP Scan
 
 Scanned the target's 20 most common UDP ports to identify available UDP services and determine which ports were open.
 
-![Host Discovery](https://imgur.com/Xm3TL3H)
+![Host Discovery](https://imgur.com/Xm3TL3H.png)
 
 ## Step 5: Aggressive Scan
 
 Performed an aggressive scan to gather information about the target's operating system, service versions, network route and available script results.
 
-![Host Discovery](https://imgur.com/cvp9Q2X)
+![Host Discovery](https://imgur.com/cvp9Q2X.png)
 
 ## Step 6: Vulnerability Scanning
 
 Used an Nmap Scripting Engine (NSE) script to check the target for a known vulnerability.
 
-![Host Discovery](https://imgur.com/Gq3byLR)
+![Host Discovery](https://imgur.com/Gq3byLR.png)
 
 ## Step 7: Results and Risk Analysis
 
