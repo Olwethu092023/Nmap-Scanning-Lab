@@ -25,5 +25,5 @@ The Nmap Scanning Lab aimed to identify open ports, detect running services and 
 
 Performed host discovery using Nmap to identify active hosts on the network. Four hosts were discovered.
 
-![Host Discovery](PASTE-YOUR-IMGUR-IMAGE-URL-HERE](https://imgur.com/eyoUk7G)
+![Host Discovery](https://imgur.com/eyoUk7G)
 
