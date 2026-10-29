@@ -76,7 +76,14 @@ from an Nmap script and not a browser.
 
 ## 4. What a defender could detect
 
+Looking at my own capture from a SOC analyst’s point of view, this scanning activity is easy to spot: 
 
+      An ARP sweep: one host asking “Who has…?” for every address in the subnet in quick succession. 
+      Many SYN packets from one source to many different ports in a short time, with lots of short connections ending in RST. 
+Service banners being grabbed and connections closed immediately afterwards. 
+The string “Nmap Scripting Engine” in HTTP User-Agent headers in web server logs. 
+Unusual NetBIOS (NBSTAT) queries from a single host. 
 
+Detection ideas: alert when one source touches many ports on a host within a short window, and flag known scanner User-Agents in web logs. These rules catch noisy default scans. An attacker can slow the scan down or change the User-Agent, so they would not catch a careful one. 
 
 
