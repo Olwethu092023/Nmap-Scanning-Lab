@@ -29,7 +29,7 @@ and the MAC address in the reply matches the one in Nmap's output.
 
 ## 2. Service and version detection
 
-This scans Nmap's default top 1,000 TCP ports. Nmap found 23 open ports and reported 977 closed ports (reset). To check that the version information is real,
+This scans Nmap's default common 1,000 TCP ports. Nmap found 23 open ports and reported 977 closed ports (reset). To check that the version information is real,
 I picked one service to follow in Wireshark: port 22, which Nmap reports as OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0). 
 
 
