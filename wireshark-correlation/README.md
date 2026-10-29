@@ -15,7 +15,6 @@ I ran a host discovery scan across the subnet. Nmap reported 4 hosts up: 192.168
 I then checked Wireshark to see whether the target’s discovery showed up in the traffic. 
 
 ![Host Discovery](https://i.imgur.com/mnrEjqw.png)
-
 Nmap host discovery output. The target 192.168.56.20 is up with MAC address 08:00:27:40:C9:AF. 
 
 
