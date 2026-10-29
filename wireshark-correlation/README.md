@@ -20,4 +20,14 @@ Nmap host discovery output. The target 192.168.56.20 is up with MAC address 08:0
 
 ![Host Discovery](https://imgur.com/n7fjNUN.png)
 
-Wireshark, display filter arp. Kali broadcasts “Who has 192.168.56.x? Tell 192.168.56.10” for each address in the subnet, and only 192.168.56.20 replies (highlighted).
+Wireshark, display filter arp. Kali broadcasts "Who has 192.168.56.x? Tell 192.168.56.10" for each address in the subnet, and only 192.168.56.20 replies (highlighted).
+
+Observation: Because the target is on the same local subnet, Nmap uses ARP rather than ICMP or TCP to check whether a host is alive. ARP maps IP addresses to MAC addresses. Kali asks "Who has 192.168.56.20?" and Metasploitable replies “192.168.56.20 is at 08:00:27:40:c9:af”. That reply is what Nmap reports as "Host is up", and the MAC address in the reply matches the one in Nmap's output. 
+
+## 2. Service and version detection
+
+This scans Nmap's default top 1,000 TCP ports. Nmap found 23 open ports and reported 977 closed ports (reset). To check that the version information is real, I picked one service to follow in Wireshark: port 22, which Nmap reports as OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0). 
+
+
+![Host Discovery](https://imgur.com/zMdoyOj))
+
