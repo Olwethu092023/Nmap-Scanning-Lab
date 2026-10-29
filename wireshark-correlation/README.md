@@ -70,6 +70,7 @@ Following the HTTP stream on that request shows the full headers, including the 
 
 
 ![Host Discovery](https://i.imgur.com/3AHnRon.png.png)
+
 Follow HTTP Stream. The User-Agent is Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html), which confirms the request came 
 from an Nmap script and not a browser.
 
