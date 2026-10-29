@@ -7,3 +7,10 @@ Attacker: Kali Linux
 Target: Metasploitable 2 
 Network: isolated VirtualBox host-only network
 Tools: Nmap, Wireshark
+
+
+## 1. Host discovery
+
+I ran a host discovery scan across the subnet. Nmap reported 4 hosts up: 192.168.56.1, 192.168.56.20 (my target), 192.168.56.100 and 192.168.56.10 (Kali). I then checked Wireshark to see whether the target’s discovery showed up in the traffic. 
+
+![Host Discovery](https://imgur.com/a/wJitR2w.png)
