@@ -78,12 +78,17 @@ from an Nmap script and not a browser.
 
 Looking at my own capture from a SOC analyst’s point of view, this scanning activity is easy to spot: 
 
-      An ARP sweep: one host asking “Who has…?” for every address in the subnet in quick succession. 
-      Many SYN packets from one source to many different ports in a short time, with lots of short connections ending in RST. 
-Service banners being grabbed and connections closed immediately afterwards. 
-The string “Nmap Scripting Engine” in HTTP User-Agent headers in web server logs. 
-Unusual NetBIOS (NBSTAT) queries from a single host. 
+   An ARP sweep: one host asking “Who has…?” for every address in the subnet in quick succession. 
+   Many SYN packets from one source to many different ports in a short time, with lots of short connections ending in RST. 
+   Service banners being grabbed and connections closed immediately afterwards. 
+   The string “Nmap Scripting Engine” in HTTP User-Agent headers in web server logs. 
+   Unusual NetBIOS (NBSTAT) queries from a single host. 
 
 Detection ideas: alert when one source touches many ports on a host within a short window, and flag known scanner User-Agents in web logs. These rules catch noisy default scans. An attacker can slow the scan down or change the User-Agent, so they would not catch a careful one. 
 
+## 5. Lessons
+
+Each piece of Nmap’s terminal output maps to specific packets: ARP replies mean “host is up”, SYN/ACK or RST means open or closed, service banners explain the version column, and script results come from their own requests. 
+The same scan looks very different from each side: for the attacker it is a list of open ports, for a defender it is a pattern of packets that can be detected. 
+Filtering Wireshark by protocol and by port is what makes a capture of tens of thousands of packets readable. 
 
