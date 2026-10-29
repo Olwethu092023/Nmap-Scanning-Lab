@@ -43,7 +43,7 @@ Wireshark, SSH conversation on port 22. After the TCP handshake (SYN, SYN/ACK, A
 The connection is then closed with FIN/ACK.
 
 Observation: The banner in the packet is the same string Nmap shows in the VERSION column. This shows that version detection works by connecting to the service 
-and reading what it announces about itself (and, for services that stay silent, sending probes and matching the replies). 
+and reading what it announces about itself. 
 
 Open and closed ports: the TCP handshake also shows port state. An open port answers the SYN with SYN/ACK; a closed port answers with RST/ACK. Nmap’s default 
 SYN scan is “half-open”. When a port is open, Kali does not complete the handshake; it sends a RST after the SYN/ACK. 
