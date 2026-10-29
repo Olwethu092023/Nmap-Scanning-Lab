@@ -19,7 +19,8 @@ I then checked Wireshark to see whether the target’s discovery showed up in th
 Nmap host discovery output. The target 192.168.56.20 is up with MAC address 08:00:27:40:C9:AF. 
 
 
-![Host Discovery](https://imgur.com/n7fjNUN.png)
+![Host Discovery](https://imgur.com/9q25yjT.png)
+
 
 Wireshark, display filter arp. Kali broadcasts "Who has 192.168.56.x? Tell 192.168.56.10" for each address in the subnet, and only 192.168.56.20 replies (highlighted).
 
